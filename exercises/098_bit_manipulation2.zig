@@ -60,5 +60,9 @@ fn isPangram(str: []const u8) bool {
     // and if so, we know the given string is a pangram
     //
     // but what do we have to compare?
-    return bits == 0x..???;
+    // 11
+    const num = std.math.pow(u32, 2, 26) - 1;
+    // std.debug.print("{b} {d}\n", .{ num, 0x3FFFFFF });
+    return bits == num;
+    // return bits == 0x3FFFFFF;
 }
